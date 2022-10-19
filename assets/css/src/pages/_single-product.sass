@@ -1,0 +1,96 @@
+.single-product
+
+.single-product__intro
+    ul
+        column-count: 2
+        column-gap: 40px
+        li
+            break-inside: avoid-column
+@media (max-width: 500px)
+    .single-product__intro
+        ul
+            column-count: 1
+
+
+.single-product__gallery
+.single-product__gallery-inner
+.single-product__gallery__main
+.single-product__gallery__main__item
+    display: none
+    &.active
+        display: block
+.single-product__gallery__main__item-inner
+    display: block
+    text-align: center
+    img
+        width: unset
+.single-product__gallery__nav
+    display: flex
+    justify-content: center
+    flex-flow: row wrap
+    padding: 40px 0 0
+.single-product__gallery__nav__item
+    position: relative
+    width: 100px
+    height: 100px
+    border: 10px solid white
+    margin: 2px
+    border-radius: 50%
+    cursor: pointer
+    &.active
+        box-shadow: 0 0 5px 0 rgba(black, 0.2)
+    img
+        @include img-object-fit
+@media (max-width: 640px)
+    .single-product__gallery__nav
+        padding: 30px 0 0
+    .single-product__gallery__nav__item
+        width: 70px
+        height: 70px
+        border: 7px solid white
+@media (max-width: 500px)
+    .single-product__gallery__nav__item
+        width: 50px
+        height: 50px
+        border: 5px solid white
+
+
+
+.single-product__desc__table
+    margin: -5px 0
+.single-product__desc__table__row
+    display: flex
+    padding: 5px 0
+    p:nth-child(1)
+        min-width: 190px
+        padding: 0 10px 0 0
+        font-weight: 500
+        text-transform: uppercase
+    p:nth-child(2)
+@media (max-width: 640px)
+    .single-product__desc__table__row
+        p:nth-child(1)
+            min-width: 150px
+@media (max-width: 400px)
+    .single-product__desc__table__row
+        flex-flow: row wrap
+    .single-product__desc__table__row
+        p:nth-child(1)
+            min-width: 100%
+            font-weight: 600
+
+
+
+.single-product__desc__variants
+    margin: 0 0 -50px
+.single-product__desc__variants__item
+    display: flex
+    flex-flow: row wrap
+    padding: 0 0 50px
+    h6
+        width: 100%
+        padding: 0 0 10px
+    p
+        padding: 0 32px 0 0
+    img
+        padding: 16px 0 0

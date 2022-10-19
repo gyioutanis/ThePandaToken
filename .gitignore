@@ -1,0 +1,6 @@
+/nbproject/*
+/version.json
+/js/config.js
+.idea/*
+/js/js-common/*
+!/js/js-common/.gitkeep

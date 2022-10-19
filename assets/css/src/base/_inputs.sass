@@ -1,0 +1,176 @@
+input:not([type=radio]):not([type=checkbox]):not([type=submit]),
+textarea
+    position: relative
+    width: 100%
+    padding: 16px
+    // margin: 0 0 16px
+
+    font-family: $font-1
+    color: white
+    font-size: 26px
+    font-weight: 400
+    // text-transform: uppercase
+
+    text-align: left
+    border-radius: 0
+    border: 1px solid #333333
+    outline: none
+    box-shadow: none
+    background-color: #333333
+    appearance: none
+    transition: 0.3s
+    &::placeholder
+        color: white
+        font-size: 26px
+        font-weight: 400
+        transition: 0.3s
+    &:hover
+        outline: none
+        border: 1px solid #333333
+    &:focus
+        outline: none
+        border: 1px solid #333333
+    &:disabled
+        opacity: 0.5
+        cursor: not-allowed
+    // &:required
+    //     background: url('#{#img-path}/') no-repeat center
+@media (max-width: 1500px)
+    input:not([type=radio]):not([type=checkbox]):not([type=submit]),
+    textarea
+        padding: 14px
+        font-size: 22px
+@media (max-width: 640px)
+    input:not([type=radio]):not([type=checkbox]):not([type=submit]),
+    textarea
+        padding: 12px
+        font-size: 16px
+
+
+
+// textarea
+//     display: block
+//     height: 220px
+//     resize: vertical
+
+input[type=submit]
+    &:disabled
+        opacity: 0.3
+        cursor: not-allowed
+    // transition: 0.3s
+    // cursor: pointer
+    // &.submit--search
+    //     height: 50px
+    //     padding: 0 50px 0 15px
+    //     background: url('#{$img-path}/icon-search--black.svg') no-repeat right 15px center / 22px
+    //     &:empty
+    //         padding: 0 50px 0 0
+    //         background: url('#{$img-path}/icon-search--black.svg') no-repeat right center center / 22px
+    //     &:hover
+    //         background-color: $color-green-l
+
+// @media (max-width: 640px)
+
+
+
+
+
+
+input[type=radio],
+input[type=checkbox]
+    opacity: 0
+    width: 20px
+    height: 1px
+    margin: 0px
+    padding: 0px
+    position: absolute
+label
+    font-family: $font-1
+    position: relative
+    display: inline-block
+    margin: 0
+    padding: 0 0 0 42px
+    // color: $color-black
+    // font-family: $font-1
+    cursor: pointer
+    input[type=radio], input[type=checkbox]
+        & + p
+            color: #333333
+            font-size: 16px
+            font-weight: 400
+            line-height: 1.2
+            a
+                color: #333333
+            &::before
+                content: ""
+                position: absolute
+                top: -5px
+                left: 0px
+                display: inline-block
+                width: 30px
+                height: 30px
+                border-radius: 0px
+                border: 1px solid black
+                box-shadow: none
+                background-color: transparent
+        &:checked + p,
+            &::before
+                background: url('#{$img-path}/icon-check--black.svg') no-repeat center / 20px auto
+
+@media (max-width: 640px)
+    label
+        padding: 0 0 0 32px
+        input[type=radio], input[type=checkbox]
+            & + p
+                font-size: 12px
+                &::before
+                    top: -5px
+                    width: 23px
+                    height: 23px
+            &:checked + p,
+                &::before
+                    background: url('#{$img-path}/icon-check--black.svg') no-repeat center / 14px auto
+
+
+
+
+
+
+select
+    width: 100%
+    padding: 15px 50px 15px 30px
+    color: white
+    font-family: $font-1
+    font-size: 22px
+    font-weight: 400
+    border: 1px solid $color-black
+    border-radius: 0px
+    outline: none
+    box-shadow: none
+    background: $color-black url('#{$img-path}/icon-chevron--bottom--white.svg') no-repeat right 32px center / 20px auto
+    appearance: none
+    transition: 0.3s
+    cursor: pointer
+select::-ms-expand
+    display: none
+select:hover, select:focus:hover
+    border: 1px solid $color-black
+    box-shadow: none
+    outline: none
+select:focus
+    border: 1px solid $color-black
+    box-shadow: none
+    outline: none
+select option
+    font-weight: normal
+select:disabled, select[aria-disabled=true]
+    opacity: 0.2
+select:disabled:hover, select[aria-disabled=true]
+    opacity: 0.2
+    cursor: default
+@media (max-width: 640px)
+    select
+        width: 100%
+        padding: 15px 50px 15px 20px
+        font-size: 16px
+        background: $color-black url('#{$img-path}/icon-chevron--bottom--white.svg') no-repeat right 20px center / 15px auto

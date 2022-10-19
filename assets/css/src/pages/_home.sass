@@ -1,0 +1,41 @@
+.home
+.home__banner
+.home__banner-inner
+    text-align: center
+.home__banner__text
+    max-width: 830px
+    margin: auto
+    padding: 120px 0 100px
+    h1
+        font-size: 44px
+        &::before
+            display: none
+    span
+        display: inline-block
+        padding: 15px 0 0
+    b, strong
+        font-weight: 700
+
+.home__banner__text__btn
+    padding: 40px 0 0
+
+@media (max-width: 1600px)
+    .home__banner__text
+        max-width: 780px
+        padding: 100px 0 80px
+        h1
+            font-size: 36px
+    .home__banner__text__btn
+        padding: 20px 0 0
+
+@media (max-width: 1000px)
+    .home__banner__text
+        padding: 80px 0
+    .home__banner__text__btn
+        padding: 0
+
+@media (max-width: 640px)
+    .home__banner__text
+        padding: 60px 0
+        h1
+            font-size: 28px

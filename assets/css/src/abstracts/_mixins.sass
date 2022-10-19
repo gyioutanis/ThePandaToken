@@ -1,0 +1,189 @@
+@mixin absolute-center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+@mixin circle($size, $imp:null)
+    overflow: hidden
+    display: block
+    width: $size $imp
+    height: $size $imp
+    border-radius: 50% $imp
+
+@mixin background-block
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+
+@mixin object-fit($size)
+    position: relative
+    display: block
+    width: 100%
+    height: 0
+    padding-bottom: $size
+    img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+@mixin img-object-fit
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+@mixin grayscale
+    filter: url("data:image/svg+xmlutf8,&ltsvg xmlns=\'http://www.w3.org/2000/svg\'&gt&ltfilter id=\'grayscale\'&gt&ltfeColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt&lt/filter&gt&lt/svg&gt#grayscale")
+    filter: gray
+    -webkit-filter: grayscale(100%)
+
+@mixin grayscale-disable
+    filter: url("data:image/svg+xmlutf8,&ltsvg xmlns=\'http://www.w3.org/2000/svg\'&gt&ltfilter id=\'grayscale\'&gt&ltfeColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/&gt&lt/filter&gt&lt/svg&gt#grayscale")
+    -webkit-filter: grayscale(0%)
+
+@mixin clearfix
+    &::after
+        content: ""
+        display: table
+        clear: both
+
+@mixin gen-width
+    width: 1300px
+    max-width: 100%
+    margin: auto
+.gen-width
+    @include gen-width
+@mixin gen-width-fhd
+    width: 1920px
+    max-width: 100%
+    margin: auto
+.gen-width-fhd
+    @include gen-width-fhd
+
+
+@mixin gen-rim
+    padding: 0 30px
+    @media (max-width: 640px)
+        padding: 0 16px
+.gen-rim
+    @include gen-rim
+
+
+@mixin gen-gap-64
+    padding-bottom: 16rem
+    @media (max-width: 800px)
+        padding-bottom: 12rem
+    @media (max-width: 640px)
+        padding-bottom: 8rem
+@mixin gen-gap-48
+    padding-bottom: 12rem
+    @media (max-width: 800px)
+        padding-bottom: 9rem
+    @media (max-width: 640px)
+        padding-bottom: 6rem
+@mixin gen-gap-32
+    padding-bottom: 8rem
+    @media (max-width: 800px)
+        padding-bottom: 6rem
+    @media (max-width: 640px)
+        padding-bottom: 4rem
+@mixin gen-gap-28
+    padding-bottom: 7rem
+    @media (max-width: 800px)
+        padding-bottom: 5.25rem
+    @media (max-width: 640px)
+        padding-bottom: 3.5rem
+@mixin gen-gap-24
+    padding-bottom: 6rem
+    @media (max-width: 800px)
+        padding-bottom: 4.5rem
+    @media (max-width: 640px)
+        padding-bottom: 3rem
+@mixin gen-gap-20
+    padding-bottom: 5rem
+    @media (max-width: 800px)
+        padding-bottom: 4.25rem
+    @media (max-width: 640px)
+        padding-bottom: 2.5rem
+@mixin gen-gap-16
+    padding-bottom: 4rem
+    @media (max-width: 800px)
+        padding-bottom: 3rem
+    @media (max-width: 640px)
+        padding-bottom: 2rem
+@mixin gen-gap-12
+    padding-bottom: 3rem
+    @media (max-width: 800px)
+        padding-bottom: 2.25rem
+    @media (max-width: 640px)
+        padding-bottom: 1.5rem
+@mixin gen-gap-8
+    padding-bottom: 2rem
+    @media (max-width: 800px)
+        padding-bottom: 1.5rem
+    @media (max-width: 640px)
+        padding-bottom: 1rem
+@mixin gen-gap-6
+    padding-bottom: 1.5rem
+    @media (max-width: 800px)
+        padding-bottom: 1.125rem
+    @media (max-width: 640px)
+        padding-bottom: 0.75rem
+@mixin gen-gap-4
+    padding-bottom: 1rem
+    @media (max-width: 800px)
+        padding-bottom: 0.75rem
+    @media (max-width: 640px)
+        padding-bottom: 0.5rem
+    
+
+.gen-gap-64
+    @include gen-gap-64
+.gen-gap-48
+    @include gen-gap-48
+.gen-gap-32
+    @include gen-gap-32
+.gen-gap-28
+    @include gen-gap-28
+.gen-gap-24
+    @include gen-gap-24
+.gen-gap-20
+    @include gen-gap-20
+.gen-gap-16
+    @include gen-gap-16
+.gen-gap-12
+    @include gen-gap-12
+.gen-gap-8
+    @include gen-gap-8
+.gen-gap-6
+    @include gen-gap-6
+.gen-gap-4
+    @include gen-gap-4
+
+
+
+
+@mixin white-font
+    h1, h2, h3, h4, h5, h6, a:not(.btn)
+        color: white
+    p, li
+        color: #e2e2e0
+    ul li::before
+        background-color: #e2e2e0
+.white-font
+    @include white-font
+
+
+@mixin black-font
+    p, h1, h2, h3, h4, h5, h6, a:not(.btn), li
+        color: black
+    ul li::before
+        background-color: black
+.black-font
+    @include black-font

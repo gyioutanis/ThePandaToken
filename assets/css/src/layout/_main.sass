@@ -1,0 +1,54 @@
+main
+    overflow: hidden
+    flex: 1
+    padding: 0
+    // &.home
+    //     padding: 40px 0 0
+    // &.index
+    //     padding: 40px 0 128px
+    ul
+        padding: 0
+        li
+            position: relative
+            padding: 0px 0px 0px 32px
+            color: black
+            font-size: 24px
+            font-weight: 400
+            line-height: 1.5
+            &::before
+                content: ""
+                position: absolute
+                top: 17px
+                left: 0px
+                display: block
+                width: 8px
+                height: 3px
+                background-color: black
+    ol
+        padding: 0
+        counter-reset: ol-counter
+        li
+            counter-increment: ol-counter
+            position: relative
+            padding: 0px 0px 0px 32px
+            color: black
+            font-size: 24px
+            font-weight: 400
+            line-height: 1.5
+            &::before
+                content: counter(ol-counter) "."
+                position: absolute
+                top: 0px
+                left: 0px
+                display: block
+
+
+@media (max-width: 640px)
+    main
+        li
+            padding: 0px 0 0px 20px
+            font-size: 18px
+            &::before
+                top: 13px
+                width: 6px
+                height: 2px

@@ -1,0 +1,42 @@
+.salvattore[data-columns]
+    display: flex
+    flex-flow: row wrap
+    margin: 0 -5px
+    .column
+        padding: 0 5px
+
+.size-1of5
+    width: calc(100% / 5)
+.size-1of4
+    width: calc(100% / 4)
+.size-1of3
+    width: calc(100% / 3)
+.size-1of2
+    width: calc(100% / 2)
+.size-1of1
+    width: calc(100% / 1)
+
+@media screen and (min-width: 1501px)
+    .salvattore[data-columns]::before
+        content: '5.column.size-1of5'
+
+@media screen and (min-width: 1201px) and (max-width: 1500px)
+    .salvattore[data-columns]::before
+        content: '4.column.size-1of4'
+
+@media screen and (min-width: 1001px) and (max-width: 1200px)
+    .salvattore[data-columns]::before
+        content: '3.column.size-1of3'
+    
+@media screen and (min-width: 641px) and (max-width: 1000px)
+    .salvattore[data-columns]::before
+        content: '2.column.size-1of2'
+
+@media screen and (max-width: 640px)
+    .salvattore[data-columns]::before
+        content: '1.column.size-1of1'
+    .gen-twitter__item
+        max-width: 400px
+        margin: 5px auto
+    .gen-twitter__item:nth-child(n+6)
+        display: none
